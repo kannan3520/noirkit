@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NoirKit — Free Instagram Username Generator</title>
+  <meta name="description" content="Generate unique Instagram username ideas in seconds: aesthetic, dark, cute, gaming, tech and keyword-based styles. Free, no signup, runs entirely in your browser.">
+  <link rel="canonical" href="https://noirkit.pages.dev/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b0b12">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NoirKit">
+  <meta property="og:title" content="NoirKit — Free Instagram Username Generator">
+  <meta property="og:description" content="Unique Instagram username ideas in seconds. Aesthetic, dark, cute, gaming and keyword styles. Free, no signup, private.">
+  <meta property="og:url" content="https://noirkit.pages.dev/">
+  <meta property="og:image" content="https://noirkit.pages.dev/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NoirKit — Free Instagram Username Generator">
+  <meta name="twitter:description" content="Unique Instagram username ideas in seconds. Free, no signup, private.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "NoirKit",
+    "url": "https://noirkit.pages.dev/",
+    "applicationCategory": "DesignApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "description": "Free Instagram username generator with aesthetic, dark, cute, gaming, tech and keyword-based styles. All generation happens locally in the browser.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#generator">Skip to generator</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="NoirKit home">
+        <svg class="brand-mark" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
+          <rect x="2" y="2" width="28" height="28" rx="8" fill="url(#g)"/>
+          <path d="M10 22V10l12 12V10" stroke="#0b0b12" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <defs><linearGradient id="g" x1="0" y1="0" x2="32" y2="32">
+            <stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/>
+          </linearGradient></defs>
+        </svg>
+        <span>NoirKit</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="#generator">Generator</a>
+        <a href="#guide">Guide</a>
+        <a href="#faq">FAQ</a>
+        <a href="/about">About</a>
+        <button id="nk-theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color theme">☾ dark</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO + GENERATOR -->
+    <section class="hero" id="generator">
+      <div class="wrap">
+        <h1>Instagram Username Generator</h1>
+        <p class="lede">Type a keyword, pick a vibe, get handle ideas that actually follow Instagram's username rules — aesthetic, dark, cute, gaming, tech and more. Everything runs locally in your browser; nothing is uploaded.</p>
+
+        <form id="nk-form" class="gen-panel" autocomplete="off">
+          <div class="field-row">
+            <div class="field grow">
+              <label for="nk-keyword">Keyword <span class="hint">(optional — hobby, mood, niche, name)</span></label>
+              <input id="nk-keyword" name="keyword" type="text" maxlength="40" placeholder="e.g. guitar, luna, pixels, cafe" spellcheck="false">
+            </div>
+            <div class="field">
+              <label for="nk-initials">Initials <span class="hint">(optional)</span></label>
+              <input id="nk-initials" name="initials" type="text" maxlength="4" placeholder="ab" spellcheck="false">
+            </div>
+          </div>
+
+          <fieldset class="field">
+            <legend>Styles <span class="hint">(pick one or more — none = random mix)</span></legend>
+            <div class="chips" id="style-chips">
+              <label class="style-chip"><input type="checkbox" value="minimal"><span>Minimal</span></label>
+              <label class="style-chip"><input type="checkbox" value="aesthetic"><span>Aesthetic</span></label>
+              <label class="style-chip"><input type="checkbox" value="dark"><span>Dark</span></label>
+              <label class="style-chip"><input type="checkbox" value="mysterious"><span>Mysterious</span></label>
+              <label class="style-chip"><input type="checkbox" value="cute"><span>Cute</span></label>
+              <label class="style-chip"><input type="checkbox" value="funny"><span>Funny</span></label>
+              <label class="style-chip"><input type="checkbox" value="professional"><span>Professional</span></label>
+              <label class="style-chip"><input type="checkbox" value="gaming"><span>Gaming</span></label>
+              <label class="style-chip"><input type="checkbox" value="tech"><span>Tech</span></label>
+              <label class="style-chip"><input type="checkbox" value="niche"><span>Niche (keyword-led)</span></label>
+            </div>
+          </fieldset>
+
+          <div class="field-row">
+            <fieldset class="field">
+              <legend>Length</legend>
+              <div class="seg">
+                <label><input type="radio" name="nk-length" value="short"><span>Short ≤12</span></label>
+                <label><input type="radio" name="nk-length" value="medium" checked><span>Medium ≤18</span></label>
+                <label><input type="radio" name="nk-length" value="long"><span>Long ≤24</span></label>
+              </div>
+            </fieldset>
+            <div class="field">
+              <label for="nk-sep">Separator</label>
+              <select id="nk-sep">
+                <option value="mixed">Mixed</option>
+                <option value="period">Periods (.)</option>
+                <option value="underscore">Underscores (_)</option>
+                <option value="none">None</option>
+              </select>
+            </div>
+            <div class="field narrow">
+              <label for="nk-count">How many</label>
+              <select id="nk-count">
+                <option value="6">6</option>
+                <option value="12" selected>12</option>
+                <option value="25">25</option>
+                <option value="40">40</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <button id="nk-generate" class="btn primary" type="submit">Generate usernames</button>
+            <button id="nk-regen" class="btn" type="button">↻ Regenerate</button>
+            <button id="nk-copy-all" class="btn" type="button">Copy all</button>
+            <button id="nk-reset" class="btn ghost" type="button">Reset</button>
+          </div>
+        </form>
+
+        <div class="results-panel">
+          <p id="nk-meta" class="results-meta" aria-live="polite"></p>
+          <p id="nk-empty" class="results-empty" hidden>No suggestions yet — hit <strong>Generate usernames</strong>.</p>
+          <ul id="nk-results" class="results" aria-label="Username suggestions"></ul>
+          <p class="fineprint">These are creative suggestions, not availability checks. A syntactically valid handle may already belong to another account — always check it on Instagram before you commit.</p>
+        </div>
+
+        <div id="nk-fav-section" class="results-panel" hidden>
+          <h2 class="h-sub">Your favorites <span class="hint">(saved locally on this device)</span></h2>
+          <ul id="nk-favs" class="results"></ul>
+          <button id="nk-clear-favs" class="btn ghost small" type="button">Clear favorites</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STYLE EXAMPLES -->
+    <section class="section" id="styles">
+      <div class="wrap">
+        <h2>Username styles, with examples</h2>
+        <p>Not sure what vibe fits? Here's what each style actually produces.</p>
+        <div class="grid">
+          <article class="tile"><h3>Minimal</h3><p class="ex">lune · velvet.9 · oz.vex</p><p>Short, lowercase, easy to type. Works everywhere.</p></article>
+          <article class="tile"><h3>Aesthetic</h3><p class="ex">soft.orchid · goldenhaze · pale.echo</p><p>Soft, pretty, flowy names with a dreamy feel.</p></article>
+          <article class="tile"><h3>Dark</h3><p class="ex">voidraven · duskshade · blackoutember</p><p>Shadowy, bold, high-contrast handles.</p></article>
+          <article class="tile"><h3>Mysterious</h3><p class="ex">nocturne.moth · whisperph · reverie.rune</p><p>Cryptic names that make people look twice.</p></article>
+          <article class="tile"><h3>Cute</h3><p class="ex">mochi.bunny · puddingpaf · cherrydaisy</p><p>Sweet, tiny, friendly handles.</p></article>
+          <article class="tile"><h3>Funny</h3><p class="ex">pickle.raid · wobblygoose · lordnoodle</p><p>Memorable because nobody forgets a noodle.</p></article>
+          <article class="tile"><h3>Professional</h3><p class="ex">mira.studio · velvet.works · jadecreative</p><p>Brandable names that age well.</p></article>
+          <article class="tile"><h3>Gaming</h3><p class="ex">frostbytegg · clutch.raid · respawnlyn</p><p>Gamer energy: fast, punchy, loud.</p></article>
+          <article class="tile"><h3>Tech</h3><p class="ex">kernel.haze · tensorbyte · asyncorbit</p><p>Dev, startup and internet-culture flavored.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUIDE -->
+    <section class="section alt" id="guide">
+      <div class="wrap prose">
+        <h2>How to choose a memorable username</h2>
+        <p>Your handle is the one part of a profile people can't change often. A few rules that hold up:</p>
+        <ol>
+          <li><strong>Keep it short enough to say out loud.</strong> Under about 15 characters is the sweet spot — longer handles get cut off in story mentions and tag lists.</li>
+          <li><strong>Pick one separator and stick with it.</strong> Mixing <code>.</code> and <code>_</code> in the same handle is how people end up at the wrong account.</li>
+          <li><strong>Put the important word first.</strong> Instagram search weights the username heavily, so lead with your niche or name, not a filler prefix.</li>
+          <li><strong>Numbers are fine sparingly.</strong> <code>mira.ceramics</code> reads as a brand; <code>mira.ceramics8472</code> reads as a bot. Use a meaningful number or none.</li>
+          <li><strong>Check it before you fall in love.</strong> Search the exact handle on Instagram — and check the profile URL — because suggestions here are ideas, not availability checks.</li>
+          <li><strong>Match it across platforms.</strong> The same handle everywhere makes you easy to find and hard to impersonate.</li>
+        </ol>
+        <p>Instagram usernames run 1–30 characters and may only contain letters, periods and underscores — no trailing period, no two periods in a row. Every suggestion here is filtered against those rules before it reaches you.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="wrap prose">
+        <h2>Frequently asked questions</h2>
+        <details>
+          <summary>Does this check if a username is available on Instagram?</summary>
+          <p>No. NoirKit generates creative, format-valid suggestions only. It never checks Instagram and never claims a handle is free — search for the exact name on Instagram before you register it.</p>
+        </details>
+        <details>
+          <summary>Is NoirKit free? Do I need an account?</summary>
+          <p>Completely free, no signup, no email, no credits. The generator runs entirely in your browser.</p>
+        </details>
+        <details>
+          <summary>What characters can Instagram usernames contain?</summary>
+          <p>Letters, numbers, periods and underscores, up to 30 characters. Usernames can't end with a period or contain two periods in a row. This generator filters suggestions against those rules.</p>
+        </details>
+        <details>
+          <summary>Can I use a keyword or my initials?</summary>
+          <p>Yes. Enter a hobby, mood, niche or name in the keyword field — the <strong>Niche</strong> style builds every suggestion around it. Initials get woven into suggestions too, for personal touches like <code>ab.luna</code>.</p>
+        </details>
+        <details>
+          <summary>Do you save my keywords or favorites?</summary>
+          <p>No servers are involved. Keywords stay in the page, and favorites are stored in your browser's local storage on this device only. See the <a href="/about#privacy">privacy notice</a>.</p>
+        </details>
+        <details>
+          <summary>How many usernames can I generate at once?</summary>
+          <p>Up to 40 per batch, with one-click copy for the whole batch, individual copy buttons, regenerate for a fresh batch, and local favorites for saving the keepers.</p>
+        </details>
+        <details>
+          <summary>Why did my favorite disappear?</summary>
+          <p>Favorites live in your browser's storage. Clearing site data or using a private window removes them. If a handle matters, copy it somewhere safe too.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <p class="brand-line">NoirKit — usernames with a shadow.</p>
+        <p class="fineprint">Independent tool, not affiliated with Instagram or Meta. Instagram is a trademark of Meta Platforms, Inc.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="/">Generator</a>
+        <a href="/about">About &amp; Privacy</a>
+        <a href="/about#contact">Contact</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div id="nk-toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

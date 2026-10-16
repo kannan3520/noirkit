@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About &amp; Privacy — NoirKit</title>
+  <meta name="description" content="What NoirKit is, how the Instagram username generator works, what data it does and doesn't collect, and how to get in touch.">
+  <link rel="canonical" href="https://noirkit.pages.dev/about">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b0b12">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NoirKit">
+  <meta property="og:title" content="About &amp; Privacy — NoirKit">
+  <meta property="og:description" content="How the NoirKit username generator works and what it means for your privacy.">
+  <meta property="og:url" content="https://noirkit.pages.dev/about">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="NoirKit home">
+        <svg class="brand-mark" width="28" height="28" viewBox="0 0 32 32" aria-hidden="true">
+          <rect x="2" y="2" width="28" height="28" rx="8" fill="url(#g)"/>
+          <path d="M10 22V10l12 12V10" stroke="#0b0b12" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <defs><linearGradient id="g" x1="0" y1="0" x2="32" y2="32">
+            <stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/>
+          </linearGradient></defs>
+        </svg>
+        <span>NoirKit</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="/">Generator</a>
+        <a href="/#guide">Guide</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/about" aria-current="page">About</a>
+        <button id="nk-theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color theme">☾ dark</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom:10px">
+      <div class="wrap prose">
+        <h1>About NoirKit</h1>
+        <p class="lede">NoirKit is a free Instagram username generator: you pick a vibe, add a keyword if you want one, and it produces handle ideas that follow Instagram's public username rules. No account, no credits, no waiting.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap prose">
+        <h2>How it works</h2>
+        <p>The generator combines style-specific word lists (dark, aesthetic, cute, gaming, tech, professional and more) with prefix, suffix and separator patterns, then filters every result against Instagram's format rules before showing it:</p>
+        <ul>
+          <li>1–30 characters</li>
+          <li>Letters, periods and underscores only</li>
+          <li>No trailing period and no two periods in a row</li>
+          <li>Must contain at least one letter</li>
+          <li>No duplicates within a batch</li>
+        </ul>
+        <p>Generation uses a seeded, deterministic algorithm, which is why a batch with the same inputs and seed repeats exactly — and why fresh batches change when you hit regenerate.</p>
+        <p><strong>What NoirKit does not do:</strong> it never checks whether a handle is actually free on Instagram. Availability changes constantly and can't be verified responsibly from a static tool, so every suggestion is presented as an idea — search it on Instagram before you claim it.</p>
+
+        <h2 id="privacy">Privacy notice</h2>
+        <p>NoirKit is a static website. There is no backend, no database and no account system.</p>
+        <ul>
+          <li><strong>Keywords and initials</strong> you type never leave your device — generation happens entirely in your browser.</li>
+          <li><strong>Favorites</strong> are stored in your browser's local storage on this device only. Clearing site data removes them.</li>
+          <li><strong>Analytics:</strong> none are installed. No cookies are set, no tracking pixels load, no third-party scripts run.</li>
+          <li><strong>Hosting logs:</strong> the hosting provider records standard server logs (IP, user agent, requested path) for security and reliability, as most hosts do.</li>
+          <li>If analytics or advertising are ever added, they will be disclosed on this page first.</li>
+        </ul>
+
+        <h2>Who makes this</h2>
+        <p>NoirKit is an independent project. It is not affiliated with, endorsed by, or connected to Instagram or Meta Platforms, Inc. Instagram is a trademark of Meta Platforms, Inc.</p>
+
+        <h2 id="contact">Contact</h2>
+        <p>Found a bug, have a style request, or want to suggest a feature? Email <a href="mailto:techgeek.veena@gmail.com">techgeek.veena@gmail.com</a> and include the word "NoirKit" in the subject line.</p>
+
+        <p><a href="/">← Back to the generator</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <p class="brand-line">NoirKit — usernames with a shadow.</p>
+        <p class="fineprint">Independent tool, not affiliated with Instagram or Meta.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="/">Generator</a>
+        <a href="/about">About &amp; Privacy</a>
+        <a href="mailto:techgeek.veena@gmail.com">Contact</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div id="nk-toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
