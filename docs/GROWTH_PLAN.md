@@ -4,7 +4,7 @@ Status: planned. No money is spent on this plan: no ads, no paid tools, no bough
 backlinks, no scheduling subscriptions. Every item below can be done with free
 accounts and browser-native tools.
 
-Site under promotion: `https://noirkit.techgeek-veena.workers.dev`
+Site under promotion: `https://noirkit.pages.dev`
 Brand: NoirKit — "usernames with a shadow."
 
 ---
@@ -291,7 +291,7 @@ and reshares are deliberately labelled as re-runs.
 
 | Step | Action | Cost | Notes |
 |---|---|---|---|
-| Google Search Console | Add property, verify by DNS TXT record or the HTML-file/meta method, submit `https://noirkit.techgeek-veena.workers.dev/sitemap.xml`, run URL Inspection on `/` and confirm "URL is available to Google". | Free | Pending — see `docs/PROJECT_LOG.md`. |
+| Google Search Console | Add property, verify by DNS TXT record or the HTML-file/meta method, submit `https://noirkit.pages.dev/sitemap.xml`, run URL Inspection on `/` and confirm "URL is available to Google". | Free | Pending — see `docs/PROJECT_LOG.md`. |
 | Bing Webmaster Tools | Create account, import the GSC property if offered, submit the sitemap, confirm indexing. | Free | Pending. |
 | IndexNow | Generate a key file, host it at the site root, then ping the IndexNow endpoint with the URL list whenever content changes (Bing, Yandex and others consume it). | Free | Suits this site: every deploy is a known, small URL list. |
 | Sitemap | `sitemap.xml` already lists `/` and `/about` with `lastmod` — keep `lastmod` truthful on each redeploy. | Free | Already implemented. |

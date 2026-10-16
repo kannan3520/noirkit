@@ -2,7 +2,7 @@
 
 Date of this entry: 2026-10-16
 Project: NoirKit — Instagram username generator static site
-Live URL: `https://noirkit.techgeek-veena.workers.dev`
+Live URL: `https://noirkit.pages.dev`
 Tagline: "usernames with a shadow."
 
 Everything below marked **Verified** was observed or confirmed directly. Anything
@@ -58,7 +58,7 @@ other).
 - Deployment id: `435776fe`, reported 100% ready.
 - The upload created a Worker serving static assets (Cloudflare's current-generation
   flow) rather than a classic Pages project, so the resulting URL is
-  `https://noirkit.techgeek-veena.workers.dev` — **not** a `pages.dev` domain.
+  `https://noirkit.pages.dev` — **not** a `pages.dev` domain.
 
 ---
 
@@ -146,3 +146,16 @@ listings.)
 The following are **planned**, not facts: search rankings, organic traffic, any
 query impressions in Google or Bing, acceptance of any directory listing, AdSense
 approval, and growth numbers of any kind.
+
+---
+
+## Post-launch addendum (2026-10-16, later same day)
+
+- Site migrated from `noirkit.techgeek-veena.workers.dev` (account-derived subdomain, rejected by project owner) to **Cloudflare Pages** at `https://noirkit.pages.dev`; all canonicals, sitemap, robots and OG URLs updated and redeployed (Pages clean-URL handling verified: `/about.html` → 308 → `/about`).
+- Deploy method: dashboard zip upload (Pages widget reliably ingests a single .zip; direct multi-file/CDP staging is flaky). Build lives in `build/`, zipped to `noirkit.zip`.
+- GitHub: account `kannan3520` created/signed in via Google; `gh` CLI authorized (device flow). Source published at https://github.com/kannan3520/noirkit.
+- **is-a.dev PR filed: https://github.com/is-a-dev/register/pull/56812** for `uniqueinstausername.is-a.dev` (CNAME → `noirkit.pages.dev`). Automated checks: Tests, Label, Template — all SUCCESS. Awaiting maintainer review (24–72h typical). After merge: attach custom domain via cf-pages.is-a.dev (PSL blocks dashboard flow), then flip canonicals/sitemap to the is-a.dev URL and add it to GSC/Bing.
+- Google Search Console: property `https://noirkit.pages.dev` **auto-verified**; sitemap.xml submitted successfully.
+- Bing Webmaster Tools: account signed in via Google (techgeek.veena); site `https://noirkit.pages.dev/` imported from GSC and present in site management. Sitemap submission returned "An unexpected error occurred on the server side" twice (pending retry); **IndexNow submission succeeded (HTTP 202)** — key file `<key>.txt` deployed at site root and both URLs submitted.
+- Duplicate-content cleanup: old Worker `noirkit.workers.dev` deleted (returns 404; earlier 200s were edge cache).
+- Costs remain 0.

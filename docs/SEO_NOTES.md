@@ -1,6 +1,6 @@
 # NoirKit — SEO Notes
 
-Site: `https://noirkit.techgeek-veena.workers.dev`
+Site: `https://noirkit.pages.dev`
 Companion docs: `GROWTH_PLAN.md` (distribution), `PROJECT_LOG.md` (build history).
 Last updated: 2026-10-16.
 
